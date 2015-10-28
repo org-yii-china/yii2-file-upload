@@ -26,13 +26,15 @@ Yii2 插件整合-图片上传（file-upload）
 
 第一种：不带model
 
+<pre>
 use common\widgets\file_upload\FileUpload;   //引入扩展
 echo FileUpload::widget();
-//如果编辑时要带默认图则
-echo FileUpload::widget(['value'=>$url]);    //$url为图片路径
+echo FileUpload::widget(['value'=>$url]);    //如果编辑时要带默认图，$url为图片路径
+</pre>
 
 第二种：带model
 
+<pre>
 <?php $form = ActiveForm::begin(); ?>
     <?= $form->field($model, 'label_img')->widget('common\widgets\file_upload\FileUpload',[
         'config'=>[
@@ -40,5 +42,5 @@ echo FileUpload::widget(['value'=>$url]);    //$url为图片路径
         ]
     ]) ?>
 <?php ActiveForm::end(); ?>
-
+</pre>
 
