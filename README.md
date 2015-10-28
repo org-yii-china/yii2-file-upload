@@ -6,7 +6,7 @@ Yii2 插件整合-图片上传（file-upload）
 
 1.点击上面扩展下载下载扩展
 
-然后放在/common/widgets文件夹中，如下图所示
+然后重命名为file_upload放在/common/widgets文件夹中
 
 2.在使用图片上传控件的控制器（controller）中，加入以下代码
 
@@ -21,22 +21,24 @@ Yii2 插件整合-图片上传（file-upload）
             ]
         ];
     }
+    
 3.views渲染图片上传界面有两种方式：
 
 第一种：不带model
 
 use common\widgets\file_upload\FileUpload;   //引入扩展
-
 echo FileUpload::widget();
-
+//如果编辑时要带默认图则
+echo FileUpload::widget(['value'=>$url]);    //$url为图片路径
 
 第二种：带model
 
 <?php $form = ActiveForm::begin(); ?>
-        
     <?= $form->field($model, 'label_img')->widget('common\widgets\file_upload\FileUpload',[
         'config'=>[
             '图片上传的一些配置，不写调用默认配置'
         ]
     ]) ?>
 <?php ActiveForm::end(); ?>
+
+
