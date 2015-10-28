@@ -35,12 +35,12 @@ echo FileUpload::widget(['value'=>$url]);    //如果编辑时要带默认图，
 第二种：带model
 
 <pre>
-<?php $form = ActiveForm::begin(); ?>
-    <?= $form->field($model, 'label_img')->widget('common\widgets\file_upload\FileUpload',[
+$form = ActiveForm::begin(); 
+    echo $form->field($model, 'label_img')->widget('common\widgets\file_upload\FileUpload',[
         'config'=>[
             '图片上传的一些配置，不写调用默认配置'
         ]
-    ]) ?>
-<?php ActiveForm::end(); ?>
+    ]);
+ActiveForm::end();
 </pre>
 
