@@ -1,6 +1,12 @@
 <?php
 namespace common\widgets\file_upload;
-
+/**
+ * @see Yii中文网  http://www.yii-china.com
+ * @author Xianan Huang <Xianan_huang@163.com>
+ * 图片上传组件
+ * 如何配置请到官网（Yii中文网）查看相关文章
+ */
+ 
 use Yii;
 use yii\base\Action;
 use yii\helpers\ArrayHelper;

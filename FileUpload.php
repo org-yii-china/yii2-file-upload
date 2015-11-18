@@ -1,4 +1,10 @@
 <?php
+/**
+ * @see Yii中文网  http://www.yii-china.com
+ * @author Xianan Huang <Xianan_huang@163.com>
+ * 图片上传组件
+ * 如何配置请到官网（Yii中文网）查看相关文章
+ */
 namespace common\widgets\file_upload;
 
 use Yii;
@@ -12,7 +18,8 @@ use yii\helpers\Url;
 class FileUpload extends InputWidget
 {
     public $config = [];
-	public $value = '';
+    
+    public $value = '';
     
     public function init()
     {
@@ -22,7 +29,6 @@ class FileUpload extends InputWidget
             'domain_url' => '',                                          //图片域名 不填为当前域名
         ];
         $this->config = ArrayHelper::merge($_config, $this->config);
-
     }
     
     public function run()
@@ -35,12 +41,13 @@ class FileUpload extends InputWidget
                 'config'=>$this->config,
                 'inputName' => $inputName,
                 'inputValue' => $inputValue,
+                'attribute' => $this->attribute,
             ]);
         } else {
             return $this->render('index',[
                 'config'=>$this->config,
                 'inputName' => 'file-upload',
-				'inputValue' => $this->value,
+                'inputValue'=> $this->value
             ]);
         }
     }
