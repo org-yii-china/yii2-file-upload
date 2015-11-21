@@ -2,7 +2,7 @@
 
 	var settings = {
 		fileType : {
-			img : ['jpg','JPG','jpeg','JPEG','gif','GIF'],
+			img : ['jpg','JPG','jpeg','JPEG','gif','GIF','PNG','png'],
 			zip : ['zip','ZIP','rar','RAR']
 		},
 		maxSize  : 30*1024*1024,
