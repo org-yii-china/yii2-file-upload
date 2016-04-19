@@ -1,0 +1,27 @@
+{
+    "name": "yii-china.com/yii2-file-upload",
+    "description": "The ueditor extension for the Yii framework",
+    "keywords": ["yii2", "file-upload", "yii-china"],
+    "homepage": "https://github.com/org-yii-china/yii2-file-upload.git",
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Xianan Huang",
+            "email": "xianan_huang@163.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "yii-china\\file-upload\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
